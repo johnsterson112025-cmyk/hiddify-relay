@@ -6,6 +6,7 @@ Wants=network.target
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/gost -L=tcp://:$port/$domain:$port
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
